@@ -36,7 +36,7 @@ test.describe('Header Navigation Bar Suite', () => {
   // 2. TEST CASE #2
   test('Checking names of buttons', async ({ page }) => {
     await test.step('Проверка текста на кнопках и ссылках', async () => {
-      await expect(page.getByRole('link', { name: 'Playwright logo Playwright12' })).toContainText(
+      await expect(page.getByRole('link', { name: 'Playwright logo Playwright' })).toContainText(
         'Playwright',
       );
       await expect(page.getByRole('link', { name: 'Docs' })).toContainText('Docs');
@@ -57,15 +57,15 @@ test.describe('Header Navigation Bar Suite', () => {
       await expect(page.getByRole('link', { name: 'Docs' })).toHaveAttribute('href', '/docs/intro');
     });
   });
-  test.skip('Checking skip', async ({ page }) => {
-    await test.step('Проверка атрибутов href у ссылок хедера', async () => {
-      await expect(page.getByRole('link', { name: 'Playwright logo Playwright' })).toHaveAttribute(
-        'href',
-        '/',
-      );
-      await expect(page.getByRole('link', { name: 'Docs' })).toHaveAttribute('href', '/docs/intro');
-    });
-  });
+  // test.skip('Checking skip', async ({ page }) => {
+  //   await test.step('Проверка атрибутов href у ссылок хедера', async () => {
+  //     await expect(page.getByRole('link', { name: 'Playwright logo Playwright' })).toHaveAttribute(
+  //       'href',
+  //       '/',
+  //     );
+  //     await expect(page.getByRole('link', { name: 'Docs' })).toHaveAttribute('href', '/docs/intro');
+  //   });
+  // });
 
   // 2. TEST CASE #4
   test('Checking light mode', async ({ page }) => {
