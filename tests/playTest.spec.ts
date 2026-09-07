@@ -12,7 +12,7 @@ test.describe('Header Navigation Bar Suite', () => {
   test('Checking showing top bar', async ({ page }) => {
     // 3. STEPS внутри тест-кейса
     await test.step('Проверка видимости основного логотипа', async () => {
-      await expect(page.getByRole('link', { name: 'Playwright logo Playwright' })).toBeVisible();
+      await expect(page.getByRole('link', { name: 'Playwright logo Playwright11' })).toBeVisible();
     });
 
     await test.step('Проверка видимости элементов навигации', async () => {
